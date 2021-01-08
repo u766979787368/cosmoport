@@ -34,7 +34,6 @@ public class ShipService {
     }
 
     public ResponseEntity<Ship> getShip(String id) {
-        //gitTest
         if (notValidId(id)) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         try {
             Optional<Ship> optional = repository.findById(Long.parseLong(id));
